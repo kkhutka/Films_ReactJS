@@ -1,0 +1,49 @@
+.film_item ,.film_page_it{
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.film_item,.film_page_it *{
+    color: white;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+.film_item{
+    max-width: 300px;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+#film_item__name, #film_page_it__name{
+    font-size: xx-large;
+}
+
+#film_item__company, #film_item__year,#film_page_it__year{
+    font-size: larger;
+}
+
+#film_item__actors{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#film_item__image{
+    display: flex;
+    width: 160px;
+    height: 230px;
+}
+
+#film_page_it__image
+{
+    display: flex;
+    width: 290px;
+    height: 410px;
+    border: 2px solid #363844;
+    margin-bottom: 30px;
+}

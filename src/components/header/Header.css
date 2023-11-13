@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 38px;
+    padding: 7px 7px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eabe0d;
+
+}
+
+.header_link, .header_link_home{
+    margin: 0 35px 0 35px;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    transition: text-shadow 0.2s;
+}
+.header_link:hover,.header_link_home:hover {
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.8);
+
+}
+
+
+.header_link_home{
+    position: absolute;
+    left: 0;
+    font-size: xx-large;
+}

@@ -1,0 +1,29 @@
+.edit-film{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-film label{
+    color: white;
+    font-size: 22px;
+    font-family: "Comic Sans MS",sans-serif;
+    margin-top: 10px;
+}
+.edit-film input{
+    padding: 4px;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #eacd0d;
+    border-radius: 40px;
+    background-color: #282c34;
+    color: white;
+    font-family: "Comic Sans MS",sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+
+
+}
+
+
