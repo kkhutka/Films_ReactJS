@@ -1,4 +1,5 @@
 .film_item ,.film_page_it{
+    max-width: 230px;
     margin: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -11,9 +12,7 @@
     font-family: "Comic Sans MS", sans-serif;
 }
 
-.film_item{
-    max-width: 300px;
-}
+
 
 .link{
     color: white;
@@ -46,4 +45,8 @@
     height: 410px;
     border: 2px solid #363844;
     margin-bottom: 30px;
+}
+
+#film_item__type{
+    color: #eabe0d;
 }

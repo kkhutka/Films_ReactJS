@@ -1,6 +1,6 @@
 import './App.css';
 import DataStorageProvider from "./components/context/data-storage-context";
-import FilmPage from "./components/film-page";
+import FilmPage from "./components/film-page/film-page";
 import Delete from "./components/delete_window/delete_window";
 import Edit from "./components/edit-film/EditFilm";
 import {BrowserRouter, Route, Routes} from "react-router-dom";

@@ -1,6 +1,93 @@
-.film_page{
+.film_page_container{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    height: 100vh;
+}
+
+.film_page_main_side{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.film_page{
+    flex: 5;
+    order:2;
+}
+
+#film_page_main_side{
+    width: 100vw;
+
+}
+
+#film_page_main_text{
+    margin-top: 0;
+    margin-left: 40px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+#film_page_main_text *{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Comic Sans MS",sans-serif;
+
+}
+#film_page_icon{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.film_page_buttons{
+    display: flex;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.film_page_toggle{
+    color:white;
+    font-family: "Comic Sans MS",sans-serif;
+    font-size: 25px;
+    margin:10px;
+}
+.film_page_toggle_element{
+    font-family: "Comic Sans MS",sans-serif;
+    font-size: 18px;
+    color: white;
+}
+#left-sidebar,
+#right-sidebar{
+    min-height: 100vh;
+    background-image: url("../../images/a31277f463eee52e717e84ac59b0f00b.jpg")!important;
+
+
+
+}
+#left-sidebar {
+    flex: 1;
+    order:1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center left;
+}
+
+#right-sidebar {
+    flex: 1;
+    order:3;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center right;
 }

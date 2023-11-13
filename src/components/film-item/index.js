@@ -2,7 +2,7 @@ import './style.css'
 import { useState } from 'react';
 import {useDataStorageContext} from "../context/data-storage-context";
 import {Link} from "react-router-dom";
-import FilmPage from "../film-page";
+import FilmPage from "../film-page/film-page";
 
 
 const FilmItem = ({filmId, filmData, currentPage}) =>{
@@ -19,6 +19,7 @@ const FilmItem = ({filmId, filmData, currentPage}) =>{
                     (<Link to={`/film-page/${filmId}`} state={{ filmData }} className={'link'}> {name}</Link>)
                     :(name) }</span>
             <span id={`${currentPage}__year`}>{year}</span>
+            <span id={`${currentPage}__type`}>{type}</span>
             <span id={`${currentPage}__company`}>{companies[companyId].name}</span>
             {actorsIds.length >0 && (
                 <div id={`${currentPage}__actors`}>
@@ -29,7 +30,7 @@ const FilmItem = ({filmId, filmData, currentPage}) =>{
                     ))}
                 </div>)
             }
-            <span id={`${currentPage}__type`}>{type}</span>
+
         </div>
     )
 }
