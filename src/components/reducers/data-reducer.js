@@ -88,7 +88,6 @@ const initialStage = {
 }
 
 const createFilm = (state, payload) =>{
-    console.log("create fucn")
     const {films, actors, companies} = state;
     films[++lastFilmId]=payload.film;
     return {...state};
@@ -108,7 +107,6 @@ const deleteFilm = (state,payload) =>{
 }
 
 const dataStorageReducer = (state, action) =>{
-    console.log("Poop")
     const {type, payload} = action;
 
     switch (type) {

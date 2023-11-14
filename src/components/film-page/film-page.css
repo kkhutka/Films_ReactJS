@@ -25,9 +25,12 @@
 }
 
 #film_page_main_text{
-    margin-top: 0;
-    margin-left: 40px;
-    display: inline-block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     vertical-align: top;
 
 }
@@ -38,10 +41,15 @@
     font-family: "Comic Sans MS",sans-serif;
 
 }
+#film_page_name{
+    text-align: center;
+}
 #film_page_icon{
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 10px;
+    max-width: 200px;
+    display: flex;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .film_page_buttons{
@@ -54,40 +62,72 @@
 
 }
 
+
 .film_page_toggle{
     color:white;
     font-family: "Comic Sans MS",sans-serif;
-    font-size: 25px;
+    font-size: 22px;
     margin:10px;
 }
 .film_page_toggle_element{
     font-family: "Comic Sans MS",sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     color: white;
 }
-#left-sidebar,
-#right-sidebar{
-    min-height: 100vh;
-    background-image: url("../../images/a31277f463eee52e717e84ac59b0f00b.jpg")!important;
+
+@media (min-width: 768px) {
+    #film_page_icon{
+        min-width: 280px;
+        max-width: 330px;
+        max-height: 330px;
+        margin-top: 20px;
+        margin-left: 10px;
+        display: inline-block;
+
+    }
+    #film_page_main_text{
+        margin-top: 20px;
+        margin-left: 40px;
+        display: inline-block;
+        vertical-align: top;
+
+    }
+    .film_page_toggle{
+        font-size: 22px;
+    }
+    .film_page_toggle_element{
+        font-size: 15px;
+    }
 
 
-
+    #left-sidebar{
+        flex: 1;
+        order: 1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center ;
+        height: 100vh;
+        background-image: url("../../images/a31277f463eee52e717e84ac59b0f00b.jpg");
+    }
+    #right-sidebar {
+        flex: 1;
+        order: 3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center ;
+        height: 100vh;
+        /*background-image: url("../../images/a31277f463eee52e717e84ac59b0f00b.jpg")!important;*/
+    }
 }
-#left-sidebar {
-    flex: 1;
-    order:1;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center left;
-}
+@media (min-width: 1024px) {
+    #film_page_main_text {
+        margin-top: 20px;
+        margin-left: 40px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 25px;
 
-#right-sidebar {
-    flex: 1;
-    order:3;
-    color: white;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center right;
+    }
 }

@@ -12,19 +12,18 @@ const FilmItem = ({filmId, filmData, currentPage}) =>{
     const {name, year, actorsIds, companyId,type, icon} = filmData;
 
     return (
-        <div className={`${currentPage}`}>
-            <img id={`${currentPage}__image`} src={icon} alt={''}/>
-            <span id={`${currentPage}__name`}>{
-                currentPage==='film_item' ?
-                    (<Link to={`/film-page/${filmId}`} state={{ filmData }} className={'link'}> {name}</Link>)
-                    :(name) }</span>
-            <span id={`${currentPage}__year`}>{year}</span>
-            <span id={`${currentPage}__type`}>{type}</span>
-            <span id={`${currentPage}__company`}>{companies[companyId].name}</span>
+        <div className={`film_item`}>
+            <img id={`film_item__image`} src={icon} alt={''}/>
+            <span id={`film_item__name`}>
+                    <Link to={`/film-page/${filmId}`} state={{ filmData }} className={'link'}> {name}</Link>
+            </span>
+            <span id={`film_item__year`}>{year}</span>
+            <span id={`film_item__type`}>{type}</span>
+            <span id={`film_item__company`}>{companies[companyId].name}</span>
             {actorsIds.length >0 && (
-                <div id={`${currentPage}__actors`}>
+                <div id={`$film_item__actors`}>
                     {actorsIds.map(actorId =>  (
-                        <div key={actorId}>
+                        <div  id={'actor'} key={actorId}>
                         {actors[actorId].firstName} {actors[actorId].lastName}
                     </div>
                     ))}

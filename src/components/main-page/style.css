@@ -1,7 +1,11 @@
+*{
+    margin:0;
+    padding: 0;
+}
 .main_page{
-    flex:6;
-    order:2;
-    margin: 30px 50px 30px 50px;
+    flex: 1;
+    position: relative;
+    margin: 0 ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +19,7 @@
 
 .searchForm {
     margin-bottom: 55px;
-    width: 500px;
+    width: 330px;
     height:50px;
     display: flex;
 
@@ -46,37 +50,78 @@
     border-bottom-right-radius: 40px;
 }
 
+
 .main_page h1{
     color: white;
     margin:60px;
-    font-size: 130px;
+    font-size: 100px;
+    max-font-size: 150px;
     font-weight: bold;
     font-family: "Comic Sans MS",sans-serif;
 }
 
-#left-sidebar,
-#right-sidebar{
-    min-height: 100vh;
-    background-image: url("../../images/a31277f463eee52e717e84ac59b0f00b.jpg")!important;
+.main_page Button{
+    align-self: flex-end;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;/* Optional: Center the button horizontally */
 
+}
+
+
+
+@media (min-width: 768px) {
+    .searchForm {
+        margin-bottom: 55px;
+        min-width: 400px;
+        max-width: 500px;
+        height:50px;
+        display: flex;
+
+    }
+    .main_page{
+        margin: 0;
+        flex:6;
+        order:2;
+    }
+    .main_page_side_container{
+        flex-wrap: wrap;
+    }
+
+    .main_page h1{
+
+        font-size:150px;
+        max-font-size: 180px;
+
+    }
+
+    #left-sidebar{
+        flex: 1;
+        order: 1;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center ;
+        background-image: url("../../images/a31277f463eee52e717e84ac59b0f00b.jpg");
+    }
+    #right-sidebar {
+        flex: 1;
+        order: 3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center ;
+        background-image: url("../../images/a31277f463eee52e717e84ac59b0f00b.jpg");
+    }
 
 
 }
-#left-sidebar {
-    flex: 1;
-    order:1;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center left;
-}
 
-#right-sidebar {
-    flex: 1;
-    order:3;
-    color: white;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center right;
+
+@media (min-width: 1024px) {
+    .main_page {
+        margin: 30px 30px 0 30px;
+    }
+
 }

@@ -1,17 +1,17 @@
 .header{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     height: 38px;
     padding: 7px 7px;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     background-color: #eabe0d;
 
 }
 
 .header_link, .header_link_home{
-    margin: 0 35px 0 35px;
+    margin: 0 3px 0 15px;
     font-size: large;
     text-decoration: none;
     color: black;
@@ -28,5 +28,22 @@
 .header_link_home{
     position: absolute;
     left: 0;
-    font-size: xx-large;
+    font-size: x-large;
+}
+
+@media (min-width: 768px) {
+    .header{
+
+        justify-content: center;
+
+    }
+    .header_link_home{
+        position: absolute;
+        left: 0;
+        font-size: xx-large;
+    }
+    .header_link, .header_link_home{
+        margin: 0 35px 0 35px;
+
+    }
 }

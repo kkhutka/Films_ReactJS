@@ -3,6 +3,7 @@ import {useDataStorageContext} from "../context/data-storage-context";
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import './films.css'
+import { FaSearch } from "react-icons/fa";
 
 
 const Films = () =>{
@@ -50,7 +51,9 @@ const Films = () =>{
         <div className={'container'}>
             <form className={'searchForm'}  onSubmit={SearchFilm}>
                 <input id='serchField' type={'search'} placeholder={searchPhrase} onChange={handleSearch}/>
-                <input id='serchSubmit' type={'submit'}/>
+                <button id='serchSubmit' type={'submit'}>
+                    <FaSearch /> {/* Font Awesome search icon */}
+                </button>
             </form>
             <div className={'list_films'}>{filmItems}</div>
 

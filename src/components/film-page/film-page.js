@@ -49,8 +49,9 @@ const FilmPage= () =>{
                             <span onClick={toggleOpenActor}>{isOpenActor ? '∧' : '∨'} Actors</span>
                             {isOpenActor && (
                                 <div>
-                                    {Object.entries(actors).map(([actorId, actorData]) => (
-                                    <div className={'film_page_toggle_element'} key={actorId}>{actorData.firstName} {actorData.lastName} </div>
+                                    {filmData.actorsIds.map(actorId =>  (
+                                        <div key={actorId}>
+                                            {actors[actorId].firstName} {actors[actorId].lastName} </div>
                                 ))}
                                 </div>
                             )}
@@ -72,7 +73,6 @@ const FilmPage= () =>{
                 <aside id={'left-sidebar'}/>
                 <aside id ={'right-sidebar'}/>
             </div>
-
 
         </div>
 

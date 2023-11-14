@@ -6,7 +6,6 @@ const DataStorageContext= createContext('');
 const useDataStorageContext = () => useContext(DataStorageContext);
 
 const DataStorageProvider = ({children}) => {
-    console.log("hola ")
     const [state, dispatch] = useDataStorage();
 
     return <DataStorageContext.Provider

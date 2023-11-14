@@ -1,5 +1,5 @@
-.film_item ,.film_page_it{
-    max-width: 230px;
+.film_item {
+    width: 230px;
     margin: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.film_item,.film_page_it *{
+.film_item *{
     color: white;
     font-family: "Comic Sans MS", sans-serif;
 }
@@ -17,12 +17,15 @@
 .link{
     color: white;
     text-decoration: none;
+    align-content: center;
 }
-#film_item__name, #film_page_it__name{
+#film_item__name{
+    font-weight: bold;
     font-size: xx-large;
+    text-align: center;
 }
 
-#film_item__company, #film_item__year,#film_page_it__year{
+#film_item__company, #film_item__year{
     font-size: larger;
 }
 
@@ -30,6 +33,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+#actor{
+    text-align: center;
+
 }
 
 #film_item__image{
@@ -38,14 +46,7 @@
     height: 230px;
 }
 
-#film_page_it__image
-{
-    display: flex;
-    width: 290px;
-    height: 410px;
-    border: 2px solid #363844;
-    margin-bottom: 30px;
-}
+
 
 #film_item__type{
     color: #eabe0d;
