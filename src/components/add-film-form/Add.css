@@ -44,3 +44,7 @@
      justify-content: left;
 }
 
+.error-message{
+    color: red;
+    font-family: "Comic Sans MS",sans-serif;
+}
