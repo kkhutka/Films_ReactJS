@@ -8,10 +8,10 @@ const CategoryPage= ()=>{
         <div className={'main_page_container'}>
             <Header/>
             <div className={'main_page_side_container'}>
+                <aside id={'left-sidebar'}/>
                 <div className='main_page'>
                     <Films ></Films>
                 </div>
-                <aside id={'left-sidebar'}/>
                 <aside id ={'right-sidebar'}/>
             </div>
 

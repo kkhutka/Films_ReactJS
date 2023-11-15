@@ -8,6 +8,7 @@ import MainPage from "./components/main-page";
 import AddFilm from "./components/add-film-form/AddFilm";
 //import Films from "./components/films";
 import CategoryPage from "./components/category-page/CategoryPage";
+
 function App() {
   return (
     <DataStorageProvider>

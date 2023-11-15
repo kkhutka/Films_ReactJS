@@ -46,12 +46,12 @@ const Add = () =>{
 
     const selectedActorOptions = actorsIds.map(actorId => ({
         value: `${actorId}`,
-        label: actors[actorId].firstName
+        label: `${actors[actorId].firstName} ${actors[actorId].lastName}`
     }));
 
     const optionsActors = Object.entries(actors).map(([actorId, actorData]) => ({
         value: actorId,
-        label: actorData.firstName
+        label:`${actors[actorId].firstName} ${actors[actorId].lastName}`
     }));
 
     const handleTypeChange = event => {
@@ -60,7 +60,7 @@ const Add = () =>{
     const addFilm = () => {
         const film = {icon, name, year, actorsIds, companyId, type};
         dispatch(dataActions.createFilm(film));
-        navigate('/')
+       navigate('/')
     }
     const customStyles = {
         control: (provided) => ({
@@ -71,17 +71,35 @@ const Add = () =>{
             backgroundColor: '#282c34' // Set the width
         }),
     };
+    const handleIconChange = event => {
+
+        setIcon(event.target.value);
+
+    }
 
     return (
         <div className={'container'}>
             <div className='add-film'>
-                <label>Name:</label><input type='text' value={name} onChange={handleNameChange} placeholder={'Name...'}/>
-                <label>Year:</label><input type='text' value={year} onChange={handleYearChange} placeholder={'Year...'}/>
-                <label>Type:</label><input type='text' value={type} onChange={handleTypeChange} placeholder={'Type...'}/>
-                <label>Actors:</label><Select styles={customStyles} options={optionsActors} defaultValue={selectedActorOptions}
+                <label className={'add-film_label'}>Icon url:</label><input  className={'add-film_input'} type='text' value={icon} onChange={handleIconChange} placeholder={'URL...'}/>
+                <label className={'add-film_label'}>Name:</label><input  className={'add-film_input'} type='text' value={name} onChange={handleNameChange} placeholder={'Name...'}/>
+                <label className={'add-film_label'}>Year:</label><input className={'add-film_input'} type='text' value={year} onChange={handleYearChange} placeholder={'Year...'}/>
+                <label className={'add-film_label'}>Type:</label><input className={'add-film_input'} type='text' value={type} onChange={handleTypeChange} placeholder={'Type...'}/>
+                <label className={'add-film_label'}>Actors:</label><Select styles={customStyles} options={optionsActors} defaultValue={selectedActorOptions}
                                                    onChange={handleActorsChange} isMulti/>
-                <label>Company:</label><Select styles={customStyles} options={optionsCompanies} defaultValue={optionsCompanies.find(option => option.value === companyId)}
-                                              onChange={handleCompanyChange} />
+                <label className={'add-film_label'}>Company:</label> <div  className={'company_radio_buttons' }>{optionsCompanies.map(company => (
+                <div  key={company.value}>
+                    <input className='radio_button'
+                        type='radio'
+                        id={company.value}
+                        name='company'
+                        value={company.value}
+                        checked={companyId === company.value}
+                        onChange={() => handleCompanyChange(company)}
+                    />
+                    <label htmlFor={company.value} className={'company_label'}>{company.label}</label>
+                </div>
+
+            ))}</div>
                 <Button text={'Add'} color={'#eabe0d'} lnk={addFilm}/>
             </div>
         </div>

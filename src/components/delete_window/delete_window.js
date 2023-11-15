@@ -8,6 +8,7 @@ import Films from "../films";
 import Draggable from 'react-draggable';
 import { Resizable } from 'react-resizable';
 import 'react-resizable/css/styles.css';
+import ResizePanel from "react-resize-panel";
 
 
 const Delete = () =>{
@@ -61,8 +62,12 @@ const Delete = () =>{
         //         setWindowState({
         //             width: windowState.width + d.width, height: windowState.height + d.height,});
         //     }}>
-
-        //{/*<Draggable handle=".handle" defaultPosition={{ x: 0, y: 0 }} position={position} onStop={handleDrag}>*/}
+        <ResizePanel direction="w" style={{ width: '400px' }} handleClass='customHandle' borderClass='customResizeBorder'>
+        <Draggable handle=".handle"
+                   defaultPosition={{ x: (window.innerWidth-200)/2, y: (window.innerHeight-100)/2 }}
+                   position={{ x: (window.innerWidth-360)/2, y: (window.innerHeight-100)/2 }}
+                   bounds={{ left: 0, top: 0, right: window.innerWidth - 360, bottom: window.innerHeight - 100 }}
+                   onStop={handleDrag}>
                 <div className="window">
                     <div className="handle">
                     <div className="content">
@@ -72,8 +77,9 @@ const Delete = () =>{
                     </div>
                     </div>
                 </div>
-       // {/*    </Draggable>*/}
-        // </Resizable>
+        </Draggable>
+        </ResizePanel>
+
 
     )
 }

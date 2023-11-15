@@ -50,11 +50,12 @@
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid  #eabe0d;
 }
 
 .film_page_buttons{
     display: flex;
-    position: absolute;
+    position: fixed;
     bottom: 3px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -68,21 +69,27 @@
     font-family: "Comic Sans MS",sans-serif;
     font-size: 22px;
     margin:10px;
+    font-weight: bold;
+
 }
+
+
 .film_page_toggle_element{
     font-family: "Comic Sans MS",sans-serif;
     font-size: 15px;
     color: white;
+    font-weight: normal;
 }
 
 @media (min-width: 768px) {
     #film_page_icon{
         min-width: 280px;
         max-width: 330px;
-        max-height: 330px;
+        max-height: 380px;
         margin-top: 20px;
         margin-left: 10px;
         display: inline-block;
+
 
     }
     #film_page_main_text{
@@ -93,7 +100,7 @@
 
     }
     .film_page_toggle{
-        font-size: 22px;
+        font-size: 25px;
     }
     .film_page_toggle_element{
         font-size: 15px;
@@ -129,5 +136,8 @@
         vertical-align: top;
         font-size: 25px;
 
+    }
+    .film_page_toggle_element{
+        font-size: 20px;
     }
 }

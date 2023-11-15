@@ -38,6 +38,7 @@ const FilmPage= () =>{
         <div className={'film_page_container'}>
             <Header/>
             <div className={'film_page_main_side'}>
+                <aside id={'left-sidebar'}/>
                 <div className={`film_page`}>
                     <div id={'film_page_main_info'}>
                         <img id={'film_page_icon'} src={filmData.icon}/>
@@ -50,7 +51,7 @@ const FilmPage= () =>{
                             {isOpenActor && (
                                 <div>
                                     {filmData.actorsIds.map(actorId =>  (
-                                        <div key={actorId}>
+                                        <div className={'film_page_toggle_element'} key={actorId}>
                                             {actors[actorId].firstName} {actors[actorId].lastName} </div>
                                 ))}
                                 </div>
@@ -70,7 +71,7 @@ const FilmPage= () =>{
                         <Button classname={'delete_button'} color='red' text='Delete' lnk={() => navigate(`/film-page/${filmId}/delete`)}></Button>
                     </div>
                 </div>
-                <aside id={'left-sidebar'}/>
+
                 <aside id ={'right-sidebar'}/>
             </div>
 

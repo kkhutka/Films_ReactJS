@@ -9,6 +9,8 @@ import spider from '../../images/spider.jpeg';
 import ntbk from '../../images/TheNotebook.jpg';
 import actors from "../actors";
 import companies from "../companies";
+import { useRef } from "react";
+
 
 let lastFilmId=0
 let lastActorId=0
@@ -22,7 +24,7 @@ const initialStage = {
             actorsIds: [1,2],
             companyId: 1,
             type:'action',
-            icon: spider
+            icon:' https://s3.amazonaws.com/media.thecrimson.com/photos/2021/11/29/194232_1353163.jpeg'
         },
         [++lastFilmId]:{
             name: 'The notebook',
@@ -30,7 +32,7 @@ const initialStage = {
             actorsIds: [3,4],
             companyId: 2,
             type: 'romantic',
-            icon: ntbk
+            icon: 'https://nicholassparks.com/wp-content/uploads/2022/08/TheNotebook.jpg'
         },
         [++lastFilmId]:{
             name: 'La La Land',
@@ -38,7 +40,7 @@ const initialStage = {
             actorsIds:[3,4,5],
             companyId: 2,
             type: 'drama',
-            icon: lala
+            icon: 'https://static01.nyt.com/images/2017/02/26/arts/26OSCARSPOSTER4/26OSCARSPOSTER4-superJumbo.jpg?quality=75&auto=webp'
         }
     },
     actors:{
@@ -87,11 +89,14 @@ const initialStage = {
      }
 }
 
-const createFilm = (state, payload) =>{
-    const {films, actors, companies} = state;
-    films[++lastFilmId]=payload.film;
-    return {...state};
-}
+const createFilm = (state, payload) => {
+    const { films, actors, companies } = state;
+    const newFilms = {
+        ...films,
+        [lastFilmId++]: payload.film,
+    };
+    return { ...state, films: newFilms };
+};
 
 const updateFilm = (state, payload) =>{
     const {films}  = state;
@@ -107,7 +112,10 @@ const deleteFilm = (state,payload) =>{
 }
 
 const dataStorageReducer = (state, action) =>{
+
     const {type, payload} = action;
+
+
 
     switch (type) {
         case CREATE_FILM_ACTION:

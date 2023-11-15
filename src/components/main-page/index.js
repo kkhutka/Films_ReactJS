@@ -13,13 +13,13 @@ const MainPage =() =>{
             <Header/>
             <div className={'main_page_side_container'}>
 
+                <aside id={'left-sidebar'}/>
                 <div className='main_page'>
                     <h1>Fun.tv</h1>
                     <Films></Films>
                     <Button text={'Add'} color={'#eabe0d'} lnk={()=>{navigate('/add')}}/>
                 </div>
 
-                <aside id={'left-sidebar'}/>
                 <aside id ={'right-sidebar'}/>
             </div>
 

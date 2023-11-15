@@ -7,13 +7,17 @@
     margin-top:30px;
 }
 
-.add-film label{
+.add-film_label{
     color: white;
     font-size: 22px;
     font-family: "Comic Sans MS",sans-serif;
     margin-top: 10px;
 }
-.add-film input{
+.radio_button{
+    margin:5px;
+    width:20px;
+}
+.add-film_input{
     padding: 4px;
     width: 250px;
     height: 25px;
@@ -28,3 +32,15 @@
 
 
 }
+.company_label{
+    color: white;
+    font-size: 18px;
+    font-family: "Comic Sans MS",sans-serif;
+    margin-top: 10px;
+}
+
+ .company_radio_buttons{
+     margin-top: 10px;
+     justify-content: left;
+}
+

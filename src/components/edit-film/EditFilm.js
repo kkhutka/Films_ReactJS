@@ -25,7 +25,11 @@ const Edit = () =>{
     const [type, setType] = useState(filmData.type);
 
 
+    const handleIconChange = event => {
 
+        setIcon(event.target.value);
+
+    }
     const handleNameChange = event => {
         setName(event.target.value);
     }
@@ -51,12 +55,12 @@ const Edit = () =>{
 
     const selectedActorOptions = actorsIds.map(actorId => ({
         value: `${actorId}`,
-        label: actors[actorId].firstName
+        label: `${actors[actorId].firstName} ${actors[actorId].lastName}`
     }));
 
     const options = Object.entries(actors).map(([actorId, actorData]) => ({
         value: actorId,
-        label: actorData.firstName
+        label: `${actors[actorId].firstName} ${actors[actorId].lastName}`
     }));
 
     const handleTypeChange = event => {
@@ -82,6 +86,7 @@ const Edit = () =>{
     return (
         <div className={'container'}>
             <div className='edit-film'>
+                <label>Icon url:</label><input type='text' value={icon} onChange={handleIconChange}/>
                 <label>Name:</label><input type='text' value={name} onChange={handleNameChange}/>
                 <label>Year:</label><input type='text' value={year} onChange={handleYearChange}/>
                 <label>Type:</label><input type='text' value={type} onChange={handleTypeChange}/>
